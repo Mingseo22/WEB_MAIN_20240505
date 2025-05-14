@@ -71,7 +71,10 @@ const check_input = () => {
    
       console.log('이메일:', emailValue);
       console.log('비밀번호:', passwordValue);
+
+      session
       loginForm.submit();
   };
+  
   document.getElementById("login_btn").addEventListener('click', check_input);
  
