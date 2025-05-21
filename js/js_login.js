@@ -1,4 +1,9 @@
-const check_xss = (input) => {
+import { session_set, session_get, session_check } from './session.js';
+import { encrypt_text, decrypt_text } from './crypto.js';
+import { generateJWT, checkAuth } from './jwt_token.js';
+
+
+ const check_xss = (input) => {
     // DOMPurify 라이브러리 로드 (CDN 사용)
     const DOMPurify = window.DOMPurify;
     // 입력 값을 DOMPurify로 sanitize
